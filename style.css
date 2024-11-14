@@ -30,7 +30,7 @@ header {
     background-color: #2d9cdb;
     padding: 50px 0;
     color: #fff;
-    margin-bottom: 60px; /* Espacio adicional debajo del encabezado */
+    margin-bottom: 20px; /* Espacio adicional debajo del encabezado */
 }
 
 header h1 {
