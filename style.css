@@ -1,153 +1,44 @@
-/* Estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilos para las preguntas frecuentes */
+#faq .faq-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f7fa;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h1, h2, h3 {
-    font-family: 'Helvetica Neue', sans-serif;
-}
-
-h1 {
-    font-size: 48px;
+#faq .faq-item h3 {
+    font-size: 18px;
+    color: #34495e;
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+#faq .faq-item p {
+    font-size: 16px;
+    color: #555;
 }
 
-h3 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-/* Header */
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 50px;
-}
-
-header p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background: #e74c3c;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.cta-button:hover {
-    background: #c0392b;
-}
-
-/* Secciones */
-.section {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.features-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.feature {
-    flex: 1;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Estilos para las opiniones de los usuarios */
+#testimonials .testimonial {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
     padding: 20px;
-    text-align: center;
-}
-
-.feature img {
-    width: 100%;
-    max-width: 150px;
     margin-bottom: 15px;
+    border-radius: 8px;
 }
 
-.plans {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.plan {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    text-align: center;
-}
-
-.plan h3 {
-    font-size: 28px;
-}
-
-.plan .price {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.plan .discount {
+#testimonials .testimonial h4 {
     font-size: 18px;
-    color: #2ecc71;
+    color: #27ae60; /* Verde */
+    margin-top: 10px;
 }
 
-.plan a {
-    display: inline-block;
-    margin-top: 20px;
+#testimonials .testimonial p {
+    font-size: 16px;
+    color: #555;
 }
 
-/* FAQ */
-.faq-item {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-/* Footer */
-footer {
-    background: #34495e;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-footer .socials a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer .socials a:hover {
-    text-decoration: underline;
+#testimonials .testimonial em {
+    font-style: italic;
+    color: #888;
 }
