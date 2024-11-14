@@ -9,12 +9,17 @@
 body {
     background-color: #f4f6f8;
     color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Contenedor principal */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Encabezado */
@@ -25,11 +30,13 @@ header {
     background-color: #2d9cdb;
     padding: 50px 0;
     color: #fff;
+    margin-bottom: 60px; /* Espacio adicional debajo del encabezado */
 }
 
 header h1 {
     font-size: 3rem;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 header p {
@@ -40,10 +47,11 @@ header p {
 .cta-button {
     background-color: #27ae60;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
@@ -51,8 +59,10 @@ header p {
 }
 
 header .image img {
-    width: 500px;
+    width: 450px;
+    height: auto;
     border-radius: 8px;
+    max-width: 100%;
 }
 
 /* Sección de público objetivo */
@@ -60,48 +70,89 @@ header .image img {
     padding: 60px 0;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 #target-audience h2 {
-    font-size: 2.5rem;
-    color: #2d9cdb;
-    margin-bottom: 20px;
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .audience-cards {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 30px;
+    justify-content: space-between;
 }
 
-.card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
+.audience-cards .card {
+    background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
+    border-radius: 8px;
     width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.card img {
+.audience-cards .card img {
     width: 100%;
-    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.card h4 {
+.audience-cards .card h4 {
     font-size: 1.5rem;
-    color: #34495e;
     margin-bottom: 10px;
 }
 
-/* Sección de precios */
+.audience-cards .card p {
+    font-size: 1rem;
+}
+
+/* Sección de planes */
 .plans-section {
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 60px 0;
 }
 
-.plans h2 {
-    font-size:
+.plans .plan {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.plans .plan h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.plans .plan .price {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.plans .plan a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.discount {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d9cdb;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 80px;
+}
