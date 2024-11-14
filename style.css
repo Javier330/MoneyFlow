@@ -1,44 +1,107 @@
-/* Estilos para las preguntas frecuentes */
-#faq .faq-item {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-    margin-bottom: 10px;
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d9cdb;
+    padding: 50px 0;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #2ecc71;
+}
+
+header .image img {
+    width: 500px;
     border-radius: 8px;
 }
 
-#faq .faq-item h3 {
-    font-size: 18px;
+/* Sección de público objetivo */
+#target-audience {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#target-audience h2 {
+    font-size: 2.5rem;
+    color: #2d9cdb;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.audience-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    font-size: 1.5rem;
     color: #34495e;
     margin-bottom: 10px;
 }
 
-#faq .faq-item p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Estilos para las opiniones de los usuarios */
-#testimonials .testimonial {
+/* Sección de precios */
+.plans-section {
     background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    padding: 60px 0;
 }
 
-#testimonials .testimonial h4 {
-    font-size: 18px;
-    color: #27ae60; /* Verde */
-    margin-top: 10px;
-}
-
-#testimonials .testimonial p {
-    font-size: 16px;
-    color: #555;
-}
-
-#testimonials .testimonial em {
-    font-style: italic;
-    color: #888;
-}
+.plans h2 {
+    font-size:
