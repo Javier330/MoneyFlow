@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Manejador para los botones de suscripción en los planes
-    document.querySelectorAll('.plans .cta-button').forEach(button => {
+    document.querySelectorAll('.cta-button').forEach(button => {
         button.addEventListener('click', function () {
             window.location.href = 'https://javier330.github.io/registro/'; // Redirige a una página específica
         });
