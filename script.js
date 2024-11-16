@@ -22,7 +22,7 @@ document.querySelector('.cta-button').addEventListener('click', function () {
 // Manejador para los botones de suscripción en los planes
 document.querySelectorAll('.plans .cta-button').forEach(button => {
     button.addEventListener('click', function () {
-        alert('¡Gracias por suscribirte a MoneyFlow!');
+        window.location.href = 'https://ww.tuurl.com'; // Redirige ana pagina especifica
         // Aquí podrías añadir lógica adicional o redireccionamiento
     });
 });
