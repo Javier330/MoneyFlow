@@ -148,6 +148,41 @@ header .image img {
     margin-top: 10px;
 }
 
+/* Estilo de los botones (cta-button) */
+.cta-button {
+    background: linear-gradient(45deg, #2d9cdb, #1a78b1); /* Gradiente moderno */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px; /* Bordes redondeados para dar un estilo más moderno */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+    text-transform: uppercase; /* Para que el texto esté en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre las letras para que se vea más elegante */
+    display: inline-block; /* Aseguramos que el botón se alinee correctamente */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.cta-button:hover {
+    background: linear-gradient(45deg, #1a78b1, #2d9cdb); /* Invertir los colores del gradiente */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa para un efecto de profundidad */
+    transform: translateY(-3px); /* Levanta ligeramente el botón al pasar el mouse */
+}
+
+/* Efecto de foco (cuando se hace clic) */
+.cta-button:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    transform: translateY(-1px); /* Levemente más arriba para el efecto de clic */
+}
+
+/* Efecto de presionar el botón (al hacer clic) */
+.cta-button:active {
+    transform: translateY(1px); /* Botón "presionado" */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más pequeña para cuando se presiona */
+}
+
 /* Footer */
 footer {
     background-color: #2d9cdb;
