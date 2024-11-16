@@ -25,8 +25,7 @@ body {
 /* Encabezado */
 header {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
-    justify-content: space-between;
+    flex-direction: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
     align-items: center;
     background-color: #2d9cdb;
     padding: 50px 20px; /* Ajusta el padding para un mejor espaciado */
@@ -34,8 +33,7 @@ header {
 }
 
 header .text {
-    flex: 1; /* Usa el espacio disponible */
-    margin-right: 20px; /* Separa el texto de la imagen */
+    text-align: center; /* Alinea el texto en el centro */
 }
 
 header h1 {
