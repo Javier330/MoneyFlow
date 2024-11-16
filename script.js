@@ -25,3 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonials[index].classList.add('active');
     }, 3000);
 });
+ // Manejador para los botones de suscripción en los planes
+    document.querySelectorAll('.plans .cta-button').forEach(button => {
+        button.addEventListener('click', function () {
+            window.location.href = 'https://javier330.github.io/registro/'; // Redirige a una página específica
+        });
+    });
+});
