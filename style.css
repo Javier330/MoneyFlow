@@ -9,7 +9,6 @@
 body {
     background-color: #f4f6f8;
     color: #333;
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -25,40 +24,41 @@ body {
 /* Encabezado */
 header {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas */
+    flex-wrap: wrap; /* Apila los elementos en pantallas pequeñas */
     align-items: center;
+    justify-content: space-between; /* Espaciado entre texto e imagen */
     background-color: #2d9cdb;
-    padding: 50px 5%; /* Ajuste dinámico del padding */
+    padding: 50px 20px;
     color: #fff;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
 }
 
 header .text {
-    text-align: center;
+    flex: 1; /* El texto ocupa todo el espacio disponible */
+    margin-bottom: 20px; /* Separación en pantallas pequeñas */
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+header .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+header .image img {
+    max-width: 100%; /* Imagen nunca más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px;
 }
 
-.cta-button {
-    background-color: #27ae60;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    margin-top: 20px;
-}
+/* Media queries para ajustar encabezado en pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila el texto y la imagen verticalmente */
+    }
 
-.cta-button:hover {
-    background-color: #2ecc71;
+    header .image img {
+        width: 80%; /* Imagen más pequeña en pantallas pequeñas */
+    }
 }
 
 /* Sección de público objetivo */
@@ -77,9 +77,9 @@ header p {
 
 .audience-cards {
     display: flex;
+    flex-wrap: wrap; /* Apila las tarjetas en pantallas pequeñas */
     justify-content: space-between;
     gap: 20px; /* Espaciado entre tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
 }
 
 .audience-cards .card {
@@ -87,31 +87,24 @@ header p {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Suaviza la sombra */
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta el tamaño para que quepan tres por fila */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: calc(33.33% - 20px); /* Limita el tamaño máximo */
 }
 
 .audience-cards .card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.audience-cards .card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.audience-cards .card p {
-    font-size: 1rem;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
     .audience-cards .card {
-        width: 30%; /* Vuelve al diseño original en pantallas grandes */
+        flex: 1 1 100%; /* Una tarjeta por fila */
+        max-width: 100%;
     }
 }
 
@@ -121,14 +114,21 @@ header p {
     padding: 60px 0;
 }
 
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .plans .plan {
     background-color: #fff;
-    padding: 20px; /* Ajuste dinámico del padding */
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-    margin: 0 auto;
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
 }
 
 .plans .plan h3 {
@@ -142,23 +142,10 @@ header p {
     margin-bottom: 20px;
 }
 
-.plans .plan a {
-    display: inline-block;
-    margin-top: 20px;
-}
-
 .discount {
     font-size: 1.2rem;
     color: #e74c3c;
     margin-top: 10px;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-    .plans .plan {
-        width: 45%; /* Vuelve al diseño original en pantallas grandes */
-        padding: 30px;
-    }
 }
 
 /* Footer */
@@ -168,4 +155,10 @@ footer {
     padding: 20px 0;
     text-align: center;
     margin-top: 80px;
+}
+
+/* Imagen global */
+img {
+    max-width: 100%; /* Imagen nunca será más ancha que el contenedor */
+    height: auto; /* Mantiene proporción */
 }
