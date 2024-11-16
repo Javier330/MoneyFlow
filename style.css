@@ -25,12 +25,17 @@ body {
 /* Encabezado */
 header {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
     justify-content: space-between;
     align-items: center;
     background-color: #2d9cdb;
-    padding: 50px 0;
+    padding: 50px 20px; /* Ajusta el padding para un mejor espaciado */
     color: #fff;
-    margin-bottom: 20px; /* Espacio adicional debajo del encabezado */
+}
+
+header .text {
+    flex: 1; /* Usa el espacio disponible */
+    margin-right: 20px; /* Separa el texto de la imagen */
 }
 
 header h1 {
@@ -58,11 +63,15 @@ header p {
     background-color: #2ecc71;
 }
 
+header .image {
+    flex: 1; /* Usa el espacio disponible */
+    text-align: center; /* Centra la imagen en su espacio */
+}
+
 header .image img {
-    width: 450px;
-    height: auto;
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto; /* Mantén las proporciones */
     border-radius: 8px;
-    max-width: 100%;
 }
 
 /* Sección de público objetivo */
