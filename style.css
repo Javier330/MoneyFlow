@@ -9,59 +9,97 @@
 body {
     background-color: #f4f6f8;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Botón de modo oscuro/claro */
-#theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+/* Encabezado */
+header {
+    display: flex;
+    flex-wrap: wrap; /* Apila los elementos en pantallas pequeñas */
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre texto e imagen */
     background-color: #2d9cdb;
+    padding: 50px 20px;
     color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-#theme-toggle:hover {
-    background-color: #1a6b94;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
 }
 
-/* Efecto de desvanecimiento */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+header .text {
+    flex: 1; /* El texto ocupa todo el espacio disponible */
+    margin-bottom: 20px; /* Separación en pantallas pequeñas */
 }
 
-/* Testimonios */
-.testimonials {
-    position: relative;
-    overflow: hidden;
-    height: 150px;
+/* Media queries para ajustar encabezado en pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila el texto y la imagen verticalmente */
+    }
+}
+
+/* Sección de público objetivo */
+#target-audience {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.audience-cards {
+    display: flex;
+    flex-wrap: wrap; /* Apila las tarjetas en pantallas pequeñas */
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.audience-cards .card {
+    background-color: #f1f1f1;
+    padding: 20px;
     text-align: center;
-    margin: 20px 0;
+    border-radius: 8px;
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta el tamaño para que quepan tres por fila */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: calc(33.33% - 20px); /* Limita el tamaño máximo */
 }
-.testimonial {
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.5s ease;
+
+.audience-cards .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
-.testimonial.active {
-    opacity: 1;
-    position: static;
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .audience-cards .card {
+        flex: 1 1 100%; /* Una tarjeta por fila */
+        max-width: 100%;
+    }
+}
+
+/* Sección de planes */
+.plans-section {
+    background-color: #fafafa;
+    padding: 60px 0;
+}
+
+.plans .plan {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
 }
 
 /* Footer */
@@ -70,13 +108,5 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
-}
-.social-icons a {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.5rem;
-}
-.social-icons a:hover {
-    color: #e1306c; /* Color característico de Instagram */
+    margin-top: 80px;
 }
