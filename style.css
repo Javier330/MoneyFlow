@@ -25,15 +25,15 @@ body {
 /* Encabezado */
 header {
     display: flex;
-    flex-direction: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas */
     align-items: center;
     background-color: #2d9cdb;
-    padding: 50px 20px; /* Ajusta el padding para un mejor espaciado */
+    padding: 50px 5%; /* Ajuste dinámico del padding */
     color: #fff;
 }
 
 header .text {
-    text-align: center; /* Alinea el texto en el centro */
+    text-align: center;
 }
 
 header h1 {
@@ -78,6 +78,8 @@ header p {
 .audience-cards {
     display: flex;
     justify-content: space-between;
+    gap: 20px; /* Espaciado entre tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
 }
 
 .audience-cards .card {
@@ -85,8 +87,8 @@ header p {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Suaviza la sombra */
 }
 
 .audience-cards .card img {
@@ -106,6 +108,13 @@ header p {
     font-size: 1rem;
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+    .audience-cards .card {
+        width: 30%; /* Vuelve al diseño original en pantallas grandes */
+    }
+}
+
 /* Sección de planes */
 .plans-section {
     background-color: #fafafa;
@@ -114,11 +123,11 @@ header p {
 
 .plans .plan {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px; /* Ajuste dinámico del padding */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 45%;
+    width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
     margin: 0 auto;
 }
 
@@ -142,6 +151,14 @@ header p {
     font-size: 1.2rem;
     color: #e74c3c;
     margin-top: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .plans .plan {
+        width: 45%; /* Vuelve al diseño original en pantallas grandes */
+        padding: 30px;
+    }
 }
 
 /* Footer */
