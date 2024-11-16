@@ -1,63 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes</title>
+    <title>MoneyFlow - Controla tu dinero, alcanza tus metas financieras</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
+
+<!-- Sección de Header (Encabezado) -->
+<header>
+    <div class="container header-content">
         <div class="text">
-            <h1>Bienvenido a Nuestra Plataforma</h1>
-            <p>Explora los planes y elige el mejor para ti.</p>
+            <h1>MoneyFlow</h1>
+            <p>Tu dinero, bajo control. Ahorra, invierte y alcanza tus metas con MoneyFlow.</p>
+            <a href="#plans" class="cta-button">Comienza tu prueba gratuita de 30 días</a>
+
+    </div>
+</header>
+
+<!-- Sección de Público Objetivo -->
+<section id="target-audience" class="section">
+    <div class="container">
+        <h2>¿A quién está dirigida MoneyFlow?</h2>
+        <p>MoneyFlow está diseñada para jóvenes profesionales, estudiantes y adultos que buscan optimizar sus finanzas personales, reducir deudas y construir hábitos de ahorro.</p>
+        
+        <div class="audience-cards">
+            <div class="card">
+                <img src="imagenes/imagen-profesional.webp.webp" alt="Joven profesional">
+                <h4>Jóvenes profesionales</h4>
+                <p>Organiza tu dinero para ahorrar e invertir en tus metas a largo plazo.</p>
+            </div>
+            <div class="card">
+                <img src="imagenes/imagen-estudiante.webp.webp" alt="Estudiantes">
+                <h4>Estudiantes universitarios</h4>
+                <p>Desarrolla hábitos financieros desde el principio para un futuro financiero saludable.</p>
+            </div>
+            <div class="card">
+                <img src="imagenes/imagen-adulto.webp.webp" alt="Adultos jóvenes">
+                <h4>Adultos jóvenes</h4>
+                <p>Reduce tus deudas y organiza tus ahorros con una herramienta sencilla y efectiva.</p>
+            </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <main>
-        <section id="target-audience">
-            <h2>Público Objetivo</h2>
-            <div class="audience-cards">
-                <div class="card">
-                    <img src="img/jovenes-profesionales.jpg" alt="Jóvenes Profesionales">
-                    <h4>Jóvenes Profesionales</h4>
-                    <p>Ideal para quienes inician su carrera.</p>
-                </div>
-                <div class="card">
-                    <img src="img/estudiantes-universitarios.jpg" alt="Estudiantes Universitarios">
-                    <h4>Estudiantes Universitarios</h4>
-                    <p>Planes diseñados para estudiantes.</p>
-                </div>
-                <div class="card">
-                    <img src="img/empresas.jpg" alt="Empresas">
-                    <h4>Empresas</h4>
-                    <p>Ofertas exclusivas para equipos.</p>
-                </div>
+<!-- Sección de Planes y Precios -->
+<section id="plans" class="section plans-section">
+    <div class="container">
+        <h2>Elige el plan perfecto para ti</h2>
+        <p>¡Prueba MoneyFlow gratis durante 30 días en ambos planes!</p>
+        <div class="plans">
+            <div class="plan">
+                <h3>Plan Mensual</h3>
+                <p class="price">$4.99/mes</p>
+                <p><small>Prueba gratuita de 30 días</small></p>
+                <a href="#signup" class="cta-button">Suscríbete</a>
             </div>
-        </section>
-
-        <section class="plans-section">
-            <div class="plans">
-                <div class="plan">
-                    <h3>Plan Básico</h3>
-                    <p class="price">$10/mes</p>
-                    <a href="#" class="cta-button subscribe">Suscribirse</a>
-                </div>
-
-                <div class="plan">
-                    <h3>Plan Premium</h3>
-                    <p class="price">$30/mes</p>
-                    <a href="#" class="cta-button subscribe">Suscribirse</a>
-                    <a href="#" class="cta-button free-trial">Prueba gratuita de 30 días</a>
-                </div>
+            <div class="plan discounted">
+                <h3>Plan Anual</h3>
+                <p class="price">$49.99/año</p>
+                <p><small>Prueba gratuita de 30 días</small></p>
+                <p class="discount">¡15% de descuento después de los 30 días!</p>
+                <a href="#signup" class="cta-button">Suscríbete</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Nuestra Plataforma. Todos los derechos reservados.</p>
-    </footer>
+<!-- Sección de Preguntas Frecuentes -->
+<section id="faq" class="section">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Cómo funciona la prueba gratuita de 30 días?</h3>
+            <p>Al registrarte en cualquiera de nuestros planes, tendrás acceso completo a las funcionalidades premium de MoneyFlow durante 30 días sin costo alguno. Una vez transcurrido ese tiempo, podrás decidir si deseas continuar con el plan mensual o anual.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Puedo cambiar de plan después de la prueba gratuita?</h3>
+            <p>Sí, puedes cambiar entre el plan mensual o anual en cualquier momento. No te preocupes, tu información de finanzas siempre estará protegida, y los cambios en tu plan se aplicarán de inmediato.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿MoneyFlow es segura para almacenar mis datos financieros?</h3>
+            <p>¡Absolutamente! En MoneyFlow, tomamos muy en serio la seguridad de tus datos. Utilizamos cifrado de nivel bancario y seguimos estrictos protocolos de seguridad para proteger toda tu información personal y financiera.</p>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- Sección de Opiniones de los Usuarios -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2>Lo que dicen nuestros usuarios</h2>
+        <div class="testimonial">
+            <p>"MoneyFlow me ha ayudado a organizar mis gastos y ahorrar para mi futuro. ¡Es una herramienta increíblemente fácil de usar!"</p>
+            <h4>Sara González</h4>
+            <p><em>Profesional independiente</em></p>
+        </div>
+        <div class="testimonial">
+            <p>"La interfaz es muy amigable. Nunca había tenido una app que me ayudara tan bien a visualizar mis finanzas. ¡Estoy más controlado que nunca!"</p>
+            <h4>Felipe Rodríguez</h4>
+            <p><em>Empleado de marketing</em></p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Footer (Pie de página) -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MoneyFlow. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Enlace al archivo JS -->
+<script src="script.js"></script>
+
 </body>
 </html>
