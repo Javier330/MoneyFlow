@@ -9,8 +9,29 @@
 body {
     background-color: #f4f6f8;
     color: #333;
-    margin: 0;
-    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Botón de modo oscuro/claro */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d9cdb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#theme-toggle:hover {
+    background-color: #1a6b94;
 }
 
 /* Contenedor principal */
@@ -19,6 +40,35 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Efecto de desvanecimiento */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonios */
+.testimonials {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+    margin: 20px 0;
+}
+.testimonial {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+.testimonial.active {
+    opacity: 1;
+    position: static;
 }
 
 /* Encabezado */
@@ -108,5 +158,13 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+.social-icons a:hover {
+    color: #e1306c; /* Color característico de Instagram */
 }
