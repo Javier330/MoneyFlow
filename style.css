@@ -24,41 +24,78 @@ body {
 /* Encabezado */
 header {
     display: flex;
-    flex-wrap: wrap; /* Apila los elementos en pantallas pequeñas */
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Espaciado entre texto e imagen */
     background-color: #2d9cdb;
     padding: 50px 20px;
     color: #fff;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
 }
 
 header .text {
-    flex: 1; /* El texto ocupa todo el espacio disponible */
-    margin-bottom: 20px; /* Separación en pantallas pequeñas */
+    text-align: center;
 }
 
-header .image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-header .image img {
-    max-width: 100%; /* Imagen nunca más ancha que su contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 8px;
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-/* Media queries para ajustar encabezado en pantallas pequeñas */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Apila el texto y la imagen verticalmente */
-    }
+/* Botones generales */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
-    header .image img {
-        width: 80%; /* Imagen más pequeña en pantallas pequeñas */
-    }
+/* Botón de Suscribirse */
+.cta-button.subscribe {
+    background-color: #27ae60;
+    color: white;
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+.cta-button.subscribe:hover {
+    background-color: #2ecc71;
+    box-shadow: 0 6px 12px rgba(39, 174, 96, 0.5);
+    transform: translateY(-2px);
+}
+
+.cta-button.subscribe:active {
+    background-color: #219150;
+    transform: translateY(2px);
+}
+
+/* Botón de Prueba gratuita */
+.cta-button.free-trial {
+    background-color: transparent;
+    color: #2d9cdb;
+    border: 2px solid #2d9cdb;
+    box-shadow: 0 4px 8px rgba(45, 156, 219, 0.3);
+}
+
+.cta-button.free-trial:hover {
+    background-color: #2d9cdb;
+    color: white;
+    box-shadow: 0 6px 12px rgba(45, 156, 219, 0.5);
+    transform: translateY(-2px);
+}
+
+.cta-button.free-trial:active {
+    background-color: #1b80b5;
+    transform: translateY(2px);
 }
 
 /* Sección de público objetivo */
@@ -77,9 +114,9 @@ header .image img {
 
 .audience-cards {
     display: flex;
-    flex-wrap: wrap; /* Apila las tarjetas en pantallas pequeñas */
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Espaciado entre tarjetas */
+    gap: 20px;
 }
 
 .audience-cards .card {
@@ -87,65 +124,25 @@ header .image img {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    flex: 1 1 calc(33.33% - 20px); /* Ajusta el tamaño para que quepan tres por fila */
+    width: calc(33.333% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: calc(33.33% - 20px); /* Limita el tamaño máximo */
 }
 
 .audience-cards .card img {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Ajusta la imagen sin distorsión */
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-    .audience-cards .card {
-        flex: 1 1 100%; /* Una tarjeta por fila */
-        max-width: 100%;
-    }
-}
-
-/* Sección de planes */
-.plans-section {
-    background-color: #fafafa;
-    padding: 60px 0;
-}
-
-.plans {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.plans .plan {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-}
-
-.plans .plan h3 {
-    font-size: 2rem;
+.audience-cards .card h4 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.plans .plan .price {
-    font-size: 2.5rem;
-    color: #27ae60;
-    margin-bottom: 20px;
-}
-
-.discount {
-    font-size: 1.2rem;
-    color: #e74c3c;
-    margin-top: 10px;
+.audience-cards .card p {
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -155,10 +152,4 @@ footer {
     padding: 20px 0;
     text-align: center;
     margin-top: 80px;
-}
-
-/* Imagen global */
-img {
-    max-width: 100%; /* Imagen nunca será más ancha que el contenedor */
-    height: auto; /* Mantiene proporción */
 }
