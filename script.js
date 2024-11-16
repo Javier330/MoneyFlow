@@ -13,13 +13,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-    // Aquí podrías añadir redireccionamiento o más acciones
-});
-
 // Manejador para los botones de suscripción en los planes
 document.querySelectorAll('.plans .cta-button').forEach(button => {
     button.addEventListener('click', function () {
-        window.location.href = 'https://javier330.github.io/registro/'; // Redirige ana pagina especifica
+        window.location.href = 'https://javier330.github.io/registro/'; // Redirige a una página específica
         // Aquí podrías añadir lógica adicional o redireccionamiento
     });
 });
