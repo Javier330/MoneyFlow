@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoneyFlow</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>MoneyFlow - Controla tu dinero, alcanza tus metas financieras</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Botón de modo oscuro/claro -->
-    <button id="theme-toggle" class="cta-button">Modo Oscuro</button>
 
-    <!-- Encabezado -->
-    <header>
+<!-- Sección de Header (Encabezado) -->
+<header>
+    <div class="container header-content">
         <div class="text">
-            <h1>Gestiona tus Finanzas con MoneyFlow</h1>
-            <p>La forma más fácil de manejar tus finanzas personales</p>
+            <h1>MoneyFlow</h1>
+            <p>Tu dinero, bajo control. Ahorra, invierte y alcanza tus metas con MoneyFlow.</p>
+            <a href="#plans" class="cta-button">Comienza tu prueba gratuita de 30 días</a>
         </div>
-        <div class="image">
-            <img src="finance-image.jpg" alt="Gestión financiera">
-        </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Público objetivo -->
-    <section id="target-audience" class="fade-in">
-        <h2>¿Para quién es MoneyFlow?</h2>
+<!-- Sección de Público Objetivo -->
+<section id="target-audience" class="section">
+    <div class="container">
+        <h2>¿A quién está dirigida MoneyFlow?</h2>
+        <p>MoneyFlow está diseñada para jóvenes profesionales, estudiantes y adultos que buscan optimizar sus finanzas personales, reducir deudas y construir hábitos de ahorro.</p>
+        
         <div class="audience-cards">
             <div class="card">
-                <img src="student.jpg" alt="Estudiante">
-                <h3>Estudiantes</h3>
-                <p>Administra tus finanzas mientras estudias.</p>
+                <img src="imagenes/imagen-profesional.webp.webp" alt="Joven profesional">
+                <h4>Jóvenes profesionales</h4>
+                <p>Organiza tu dinero para ahorrar e invertir en tus metas a largo plazo.</p>
             </div>
             <div class="card">
-                <img src="family.jpg" alt="Familias">
-                <h3>Familias</h3>
-                <p>Crea un presupuesto familiar efectivo.</p>
+                <img src="imagenes/imagen-estudiante.webp.webp" alt="Estudiantes">
+                <h4>Estudiantes universitarios</h4>
+                <p>Desarrolla hábitos financieros desde el principio para un futuro financiero saludable.</p>
             </div>
             <div class="card">
-                <img src="freelancer.jpg" alt="Freelancers">
-                <h3>Freelancers</h3>
-                <p>Controla tus ingresos y gastos de manera sencilla.</p>
+                <img src="imagenes/imagen-adulto.webp.webp" alt="Adultos jóvenes">
+                <h4>Adultos jóvenes</h4>
+                <p>Reduce tus deudas y organiza tus ahorros con una herramienta sencilla y efectiva.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonios -->
-    <section id="testimonials" class="fade-in">
-        <h2>¿Qué dicen nuestros usuarios?</h2>
-        <div class="testimonials">
-            <div class="testimonial active">"MoneyFlow me ayudó a organizar mi presupuesto en poco tiempo. ¡Recomendado!"</div>
-            <div class="testimonial">"Es increíble lo fácil que es mantener mis finanzas al día."</div>
-            <div class="testimonial">"Una herramienta imprescindible para cualquier profesional independiente."</div>
+<!-- Sección de Planes y Precios -->
+<section id="plans" class="section plans-section">
+    <div class="container">
+        <h2>Elige el plan perfecto para ti</h2>
+        <p>¡Prueba MoneyFlow gratis durante 30 días en ambos planes!</p>
+        <div class="plans">
+            <div class="plan">
+                <h3>Plan Mensual</h3>
+                <p class="price">$4.99/mes</p>
+                <p><small>Prueba gratuita de 30 días</small></p>
+                <a href="https://javier330.github.io/registro/" class="cta-button">Suscríbete</a>
+            </div>
+            <div class="plan discounted">
+                <h3>Plan Anual</h3>
+                <p class="price">$49.99/año</p>
+                <p><small>Prueba gratuita de 30 días</small></p>
+                <p class="discount">¡15% de descuento después de los 30 días!</p>
+                <a href="https://javier330.github.io/registro/" class="cta-button">Suscríbete</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 MoneyFlow. Todos los derechos reservados.</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/moneyflowco_/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+<!-- Sección de Footer (Pie de página) -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MoneyFlow. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Enlace al archivo JS -->
+<script src="script.js"></script>
+
 </body>
 </html>
