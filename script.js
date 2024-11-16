@@ -13,9 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Manejador para botón de prueba gratuita (ejemplo)
-document.querySelector('.cta-button').addEventListener('click', function () {
-    alert('¡Gracias por interesarte en nuestra prueba gratuita de 30 días!');
     // Aquí podrías añadir redireccionamiento o más acciones
 });
 
