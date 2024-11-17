@@ -122,13 +122,16 @@ header .cta-button:hover {
     text-align: center;
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
+    margin-bottom: 20px;
 }
 
 .plans .discounted {
     background-color: #e6f7ff;
 }
 
-.cta-button {
+/* Ajuste de los botones en los planes */
+.plan .cta-button {
+    margin-top: 20px; /* Añadir espacio entre el texto y el botón */
     background-color: #2d9cdb;
     color: #fff;
     border: none;
@@ -136,9 +139,12 @@ header .cta-button:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
 }
 
-.cta-button:hover {
+.plan .cta-button:hover {
     background-color: #1a78b1;
 }
 
@@ -173,4 +179,27 @@ header .cta-button:hover {
 
 .testimonial-carousel button:hover {
     background-color: #1a78b1;
+}
+
+/* Footer */
+footer {
+    background-color: #2d9cdb;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #ff8a00;
 }
