@@ -206,8 +206,8 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Asegura que los elementos dentro de la tarjeta se distribuyan */
-    height: 350px; /* Fija la altura para evitar que el contenido se solape */
+    justify-content: flex-start; /* Asegura que el contenido se distribuye al principio */
+    height: 400px; /* Altura fija para las tarjetas */
 }
 
 .plan h3 {
@@ -225,6 +225,7 @@ header p {
     color: #777;
 }
 
+/* Asegura que el botón esté siempre en la parte inferior */
 .plan .cta-button {
     background-color: #2d9cdb;
     color: #fff;
@@ -232,7 +233,7 @@ header p {
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    margin-top: auto; /* Empuja el botón hacia abajo */
 }
 
 .plan .cta-button:hover {
