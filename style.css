@@ -11,13 +11,6 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #f4f6f8;
 }
 
 /* Contenedor principal */
@@ -31,35 +24,41 @@ body.dark-mode {
 /* Encabezado */
 header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Apila los elementos en pantallas pequeñas */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaciado entre texto e imagen */
     background-color: #2d9cdb;
     padding: 50px 20px;
     color: #fff;
-    text-align: center;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
 }
 
 header .text {
+    flex: 1; /* El texto ocupa todo el espacio disponible */
+    margin-bottom: 20px; /* Separación en pantallas pequeñas */
+}
+
+header .image {
     flex: 1;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-header .cta-button {
-    background: linear-gradient(45deg, #2d9cdb, #1a78b1);
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+header .image img {
+    max-width: 100%; /* Imagen nunca más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px;
 }
 
-header .cta-button:hover {
-    background: linear-gradient(45deg, #1a78b1, #2d9cdb);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
+/* Media queries para ajustar encabezado en pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila el texto y la imagen verticalmente */
+    }
+
+    header .image img {
+        width: 80%; /* Imagen más pequeña en pantallas pequeñas */
+    }
 }
 
 /* Sección de público objetivo */
@@ -78,9 +77,9 @@ header .cta-button:hover {
 
 .audience-cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Apila las tarjetas en pantallas pequeñas */
     justify-content: space-between;
-    gap: 20px;
+    gap: 20px; /* Espaciado entre tarjetas */
 }
 
 .audience-cards .card {
@@ -88,20 +87,28 @@ header .cta-button:hover {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    flex: 1 1 calc(33.33% - 20px);
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta el tamaño para que quepan tres por fila */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px); /* Limita el tamaño máximo */
+}
+
+.audience-cards .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
     .audience-cards .card {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Una tarjeta por fila */
         max-width: 100%;
     }
 }
 
-/* Sección de Planes */
+/* Sección de planes */
 .plans-section {
     background-color: #fafafa;
     padding: 60px 0;
@@ -122,84 +129,71 @@ header .cta-button:hover {
     text-align: center;
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
+}
+
+.plans .plan h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.plans .plan .price {
+    font-size: 2.5rem;
+    color: #27ae60;
     margin-bottom: 20px;
 }
 
-.plans .discounted {
-    background-color: #e6f7ff;
-}
-
-/* Ajuste de los botones en los planes */
-.plan .cta-button {
-    margin-top: 20px; /* Añadir espacio entre el texto y el botón */
-    background-color: #2d9cdb;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-}
-
-.plan .cta-button:hover {
-    background-color: #1a78b1;
-}
-
-/* Sección de Testimonios */
-.testimonial-carousel {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
-
-.testimonial {
-    display: none;
+.discount {
     font-size: 1.2rem;
-    color: #333;
-    padding: 20px;
+    color: #e74c3c;
+    margin-top: 10px;
 }
 
-.testimonial.active {
-    display: block;
-}
-
-.testimonial-carousel button {
-    background-color: #2d9cdb;
-    color: #fff;
+/* Estilo de los botones (cta-button) */
+.cta-button {
+    background: linear-gradient(45deg, #2d9cdb, #1a78b1); /* Gradiente moderno */
+    color: #fff; /* Texto blanco */
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px; /* Bordes redondeados para dar un estilo más moderno */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+    text-transform: uppercase; /* Para que el texto esté en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre las letras para que se vea más elegante */
+    display: inline-block; /* Aseguramos que el botón se alinee correctamente */
 }
 
-.testimonial-carousel button:hover {
-    background-color: #1a78b1;
+/* Efecto al pasar el mouse sobre el botón */
+.cta-button:hover {
+    background: linear-gradient(45deg, #1a78b1, #2d9cdb); /* Invertir los colores del gradiente */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa para un efecto de profundidad */
+    transform: translateY(-3px); /* Levanta ligeramente el botón al pasar el mouse */
+}
+
+/* Efecto de foco (cuando se hace clic) */
+.cta-button:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    transform: translateY(-1px); /* Levemente más arriba para el efecto de clic */
+}
+
+/* Efecto de presionar el botón (al hacer clic) */
+.cta-button:active {
+    transform: translateY(1px); /* Botón "presionado" */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más pequeña para cuando se presiona */
 }
 
 /* Footer */
 footer {
     background-color: #2d9cdb;
-    color: #fff;
-    text-align: center;
+    color: white;
     padding: 20px 0;
+    text-align: center;
+    margin-top: 80px;
 }
 
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer .social-icons a:hover {
-    color: #ff8a00;
+/* Imagen global */
+img {
+    max-width: 100%; /* Imagen nunca será más ancha que el contenedor */
+    height: auto; /* Mantiene proporción */
 }
