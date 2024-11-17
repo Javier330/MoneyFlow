@@ -1,67 +1,42 @@
-// script.js
-
-// Ejecutar el código después de que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
-    // Función para manejar el desplazamiento suave a las secciones de la página
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Evita el comportamiento predeterminado
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth', // Desplazamiento suave
-                    block: 'start'     // Alinea con la parte superior
-                });
-            }
+// Esperar que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // Función para manejar el desplazamiento suave a las secciones
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop - 60, // Ajuste por si tienes un header fijo
+                behavior: 'smooth'
+            });
         });
     });
 
-    // Manejador para los botones de suscripción en los planes
-    document.querySelectorAll('.plans .cta-button').forEach(button => {
-        button.addEventListener('click', function () {
-            window.location.href = 'https://javier330.github.io/registro/'; // Redirige a una página específica
-        });
-    });
-
-    // Alternar Modo Oscuro
-    const toggleButton = document.getElementById('theme-toggle');
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
-    });
-
-    // Efecto de desvanecimiento
-    const fadeIns = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
-    fadeIns.forEach(fade => observer.observe(fade));
-
-    // Carrusel de testimonios
-    let currentIndex = 0;
+    // Función para manejar los testimonios
+    let currentTestimonial = 0;
     const testimonials = document.querySelectorAll('.testimonial');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    const showTestimonial = index => {
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    
+    function showTestimonial(index) {
         testimonials.forEach((testimonial, i) => {
-            testimonial.classList.toggle('active', i === index);
+            testimonial.classList.remove('active');
+            if (i === index) {
+                testimonial.classList.add('active');
+            }
         });
-    };
+    }
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
-        showTestimonial(currentIndex);
+    prevBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial === 0) ? testimonials.length - 1 : currentTestimonial - 1;
+        showTestimonial(currentTestimonial);
     });
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
-        showTestimonial(currentIndex);
+    nextBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial === testimonials.length - 1) ? 0 : currentTestimonial + 1;
+        showTestimonial(currentTestimonial);
     });
-
-    showTestimonial(currentIndex);
 });
