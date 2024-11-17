@@ -204,6 +204,10 @@ header p {
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos dentro de la tarjeta se distribuyan */
+    height: 350px; /* Fija la altura para evitar que el contenido se solape */
 }
 
 .plan h3 {
@@ -228,6 +232,7 @@ header p {
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
 }
 
 .plan .cta-button:hover {
