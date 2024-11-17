@@ -11,6 +11,13 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Transición para el modo oscuro */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f6f8;
 }
 
 /* Contenedor principal */
@@ -21,47 +28,50 @@ body {
     padding: 20px;
 }
 
+/* Botón de modo oscuro */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2d9cdb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #555;
+    color: #fff;
+}
+
 /* Encabezado */
 header {
     display: flex;
-    flex-wrap: wrap; /* Apila los elementos en pantallas pequeñas */
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between; /* Espaciado entre texto e imagen */
+    justify-content: space-between;
     background-color: #2d9cdb;
     padding: 50px 20px;
     color: #fff;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    text-align: center;
 }
 
 header .text {
-    flex: 1; /* El texto ocupa todo el espacio disponible */
-    margin-bottom: 20px; /* Separación en pantallas pequeñas */
-}
-
-header .image {
     flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-header .image img {
-    max-width: 100%; /* Imagen nunca más ancha que su contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 /* Media queries para ajustar encabezado en pantallas pequeñas */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Apila el texto y la imagen verticalmente */
-    }
-
-    header .image img {
-        width: 80%; /* Imagen más pequeña en pantallas pequeñas */
+        flex-direction: column;
     }
 }
 
-/* Sección de público objetivo */
+/* Sección de Público Objetivo */
 #target-audience {
     padding: 60px 0;
     background-color: #fff;
@@ -77,9 +87,9 @@ header .image img {
 
 .audience-cards {
     display: flex;
-    flex-wrap: wrap; /* Apila las tarjetas en pantallas pequeñas */
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Espaciado entre tarjetas */
+    gap: 20px;
 }
 
 .audience-cards .card {
@@ -87,28 +97,20 @@ header .image img {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    flex: 1 1 calc(33.33% - 20px); /* Ajusta el tamaño para que quepan tres por fila */
+    flex: 1 1 calc(33.33% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: calc(33.33% - 20px); /* Limita el tamaño máximo */
-}
-
-.audience-cards .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ajusta la imagen sin distorsión */
-    border-radius: 8px;
-    margin-bottom: 15px;
+    max-width: calc(33.33% - 20px);
 }
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
     .audience-cards .card {
-        flex: 1 1 100%; /* Una tarjeta por fila */
+        flex: 1 1 100%;
         max-width: 100%;
     }
 }
 
-/* Sección de planes */
+/* Sección de Planes */
 .plans-section {
     background-color: #fafafa;
     padding: 60px 0;
@@ -131,56 +133,29 @@ header .image img {
     max-width: calc(50% - 20px);
 }
 
-.plans .plan h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.plans .plan .price {
-    font-size: 2.5rem;
-    color: #27ae60;
-    margin-bottom: 20px;
-}
-
-.discount {
-    font-size: 1.2rem;
-    color: #e74c3c;
-    margin-top: 10px;
-}
-
-/* Estilo de los botones (cta-button) */
-.cta-button {
-    background: linear-gradient(45deg, #2d9cdb, #1a78b1); /* Gradiente moderno */
-    color: #fff; /* Texto blanco */
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 50px; /* Bordes redondeados para dar un estilo más moderno */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transición suave para los efectos */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
-    text-transform: uppercase; /* Para que el texto esté en mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre las letras para que se vea más elegante */
-    display: inline-block; /* Aseguramos que el botón se alinee correctamente */
-}
-
 /* Efecto al pasar el mouse sobre el botón */
 .cta-button:hover {
-    background: linear-gradient(45deg, #1a78b1, #2d9cdb); /* Invertir los colores del gradiente */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa para un efecto de profundidad */
-    transform: translateY(-3px); /* Levanta ligeramente el botón al pasar el mouse */
+    background: linear-gradient(45deg, #1a78b1, #2d9cdb);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 /* Efecto de foco (cuando se hace clic) */
 .cta-button:focus {
-    outline: none; /* Elimina el contorno predeterminado */
-    transform: translateY(-1px); /* Levemente más arriba para el efecto de clic */
+    outline: none;
+    transform: translateY(-1px);
 }
 
 /* Efecto de presionar el botón (al hacer clic) */
 .cta-button:active {
-    transform: translateY(1px); /* Botón "presionado" */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más pequeña para cuando se presiona */
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen global */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Footer */
@@ -192,8 +167,58 @@ footer {
     margin-top: 80px;
 }
 
-/* Imagen global */
-img {
-    max-width: 100%; /* Imagen nunca será más ancha que el contenedor */
-    height: auto; /* Mantiene proporción */
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1a78b1;
+}
+
+/* Sección de Testimonios */
+.testimonial-carousel {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial-carousel button {
+    background-color: #2d9cdb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-carousel button:hover {
+    background-color: #1a78b1;
+}
+
+/* Efecto de desvanecimiento */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
 }
