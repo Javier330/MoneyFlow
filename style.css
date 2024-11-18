@@ -277,14 +277,60 @@ footer a.instagram-button {
     margin-top: 10px;
     background-color: #e4405f;
     padding: 12px;
-    border-radius:
-}
-
-.instagram-button:hover {
-    background-color: #c13584;
-    transform: scale(1.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .instagram-button i {
-    pointer-events: none;
+    margin: 0;
 }
+/* Contenedor general */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Estilo para las secciones de contenido */
+.section {
+    padding: 2rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.faq-item, .review-item, .plan {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #2d9cdb;
+}
+
+.price {
+    font-size: 2rem;
+    color: #e4405f;
+}
+
+.discount {
+    font-size: 1.2rem;
+    color: #e4405f;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Añadir más estilos si es necesario */
