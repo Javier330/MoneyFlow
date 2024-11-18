@@ -15,16 +15,28 @@ body {
 
 /* Barra de navegación fija */
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Desenfoque */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Espaciado adicional */
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between; /* Para alinear logotipo y enlaces */
+    box-shadow: none; /* Inicialmente sin sombra */
+    transition: box-shadow 0.3s ease; /* Suave transición para el efecto scroll */
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al desplazarse */
+}
+
+.navbar-logo img {
+    height: 40px; /* Tamaño del logotipo */
+    margin-right: 20px;
 }
 
 .navbar ul {
@@ -46,10 +58,16 @@ body {
     text-transform: uppercase;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a.active {
+    border-bottom: 2px solid #2d9cdb; /* Línea inferior para el elemento activo */
     color: #2d9cdb;
 }
 
+.navbar ul li a:hover {
+    color: #2d9cdb;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
 /* Sección Header (Encabezado) */
 header {
     padding: 100px 20px 40px; /* Ajuste para no estar cubierto por la barra */
