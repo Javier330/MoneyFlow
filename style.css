@@ -2,8 +2,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 body {
@@ -11,6 +12,11 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+}
+
+/* Espaciado superior en las páginas para que no se superponga la barra */
+section {
+    margin-top: 80px; /* Espaciado suficiente para no tapar el contenido con la barra de navegación */
 }
 
 /* Barra de navegación fija */
@@ -266,16 +272,12 @@ footer {
     text-align: center;
 }
 
-.instagram-button {
-    background-color: #e4405f;
-    color: #fff;
-    padding: 12px;
-    border-radius: 50%;
-    text-align: center;
+footer a.instagram-button {
     display: inline-block;
     margin-top: 10px;
-    transition: all 0.3s ease;
-    font-size: 1.5rem;
+    background-color: #e4405f;
+    padding: 12px;
+    border-radius:
 }
 
 .instagram-button:hover {
