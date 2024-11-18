@@ -22,21 +22,16 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 20px; /* Espaciado adicional */
+    padding: 10px 0; /* Espaciado adicional */
     display: flex;
+    justify-content: center; /* Para alinear logotipo y enlaces */
     align-items: center;
-    justify-content: space-between; /* Para alinear logotipo y enlaces */
     box-shadow: none; /* Inicialmente sin sombra */
     transition: box-shadow 0.3s ease; /* Suave transición para el efecto scroll */
 }
 
 .navbar.scrolled {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al desplazarse */
-}
-
-.navbar-logo img {
-    height: 40px; /* Tamaño del logotipo */
-    margin-right: 20px;
 }
 
 .navbar ul {
