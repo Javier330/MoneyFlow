@@ -3,26 +3,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Usamos una fuente más formal y moderna */
 }
 
 body {
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #f4f6f8; /* Fondo suave */
+    color: #333; /* Gris oscuro para texto */
     margin: 0;
     padding: 0;
 }
 
 /* Barra de navegación fija */
 .navbar {
-    background-color: #333;
+    background-color: #333; /* Gris oscuro para una apariencia profesional */
     color: #fff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para mayor elegancia */
     display: flex;
     justify-content: center;
 }
@@ -35,19 +35,20 @@ body {
 }
 
 .navbar ul li {
-    margin: 0 20px;
+    margin: 0 25px; /* Espacio entre los elementos */
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.3rem; /* Fuente más grande para mayor legibilidad */
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
 }
 
 .navbar ul li a:hover {
-    color: #2d9cdb;
+    color: #007BFF; /* Azul profesional en hover */
 }
 
 /* Sección Header (Encabezado) */
@@ -56,30 +57,32 @@ header {
     justify-content: center;  /* Centra horizontalmente */
     align-items: center;      /* Centra verticalmente */
     flex-direction: column;   /* Organiza los elementos en columna */
-    padding: 120px 20px 40px; /* Ajuste superior para no estar cubierto por la barra */
-    background-color: #2d9cdb;
+    padding: 120px 20px 60px; /* Ajuste superior para no estar cubierto por la barra */
+    background-color: #2d9cdb; /* Azul profesional */
     color: #fff;
     text-align: center;
     min-height: 300px;        /* Altura mínima para dar espacio */
 }
 
 header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 3.8rem; /* Título más grande para llamar la atención */
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
 header p {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .cta-button {
     background-color: #fff;
     color: #2d9cdb;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: 600;
 }
 
 .cta-button:hover {
@@ -95,35 +98,45 @@ header p {
 
 #target-audience h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 2.8rem;  /* Título más grande */
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
 }
 
 .audience-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .card {
     background-color: #f8f8f8;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     width: 300px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    transition: transform 0.3s ease;  /* Efecto suave al pasar el mouse */
+}
+
+.card:hover {
+    transform: translateY(-10px);  /* Efecto de elevación al pasar el mouse */
 }
 
 .card img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .card h4 {
-    margin-top: 15px;
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
 }
 
 .card p {
@@ -146,21 +159,24 @@ header p {
 /* Estilos para los elementos de las preguntas frecuentes */
 .faq-item {
     background-color: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
 }
 
 .faq-item h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
 }
 
 .faq-item p {
     font-size: 1.2rem;
     color: #555;
 }
+
 /* Sección de Opiniones de los usuarios */
 #reviews {
     padding: 60px 20px;
@@ -170,7 +186,7 @@ header p {
 .review-item {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -182,10 +198,10 @@ header p {
 }
 
 .review-item span {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #777;
     display: block;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 /* Sección de Planes y Precios */
@@ -198,7 +214,7 @@ header p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .plan {
@@ -207,7 +223,7 @@ header p {
     text-align: center;
     width: 100%;
     max-width: 350px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -218,12 +234,16 @@ header p {
 
 .plan h3 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
 }
 
 .plan .price {
     font-size: 2.5rem;
     margin: 20px 0;
+    font-weight: 600;
+    color: #333;
 }
 
 .plan small {
@@ -235,28 +255,31 @@ header p {
 .plan .cta-button {
     background-color: #2d9cdb;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto; /* Empuja el botón hacia abajo */
+    font-weight: 600;
 }
 
 .plan .cta-button:hover {
     background-color: #1f78b7;
 }
 
+/* Sección de descuento */
 .discount {
     color: #e74c3c;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Footer */
 footer {
-    background-color: #2d9cdb;
+    background-color: #2d9cdb; /* Azul profesional para el pie de página */
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .instagram-button {
