@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes de Precios</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Planes - MoneyFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li><a href="reviews.html">Opiniones</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="reviews.html">Opiniones</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Sección Planes -->
-    <section class="section plans-section">
+    <!-- Sección de Planes y Precios -->
+    <section id="plans" class="section plans-section">
         <div class="container">
-            <h2>Elige tu plan</h2>
+            <h2>Elige el plan perfecto para ti</h2>
+            <p>¡Prueba MoneyFlow gratis durante 30 días en ambos planes!</p>
             <div class="plans">
                 <div class="plan">
-                    <h3>Mensual</h3>
+                    <h3>Plan Mensual</h3>
                     <p class="price">$4.99/mes</p>
-                    <a href="#" class="cta-button">Suscríbete</a>
+                    <p><small>Prueba gratuita de 30 días</small></p>
+                    <a href="https://javier330.github.io/registro/" class="cta-button">Suscríbete</a>
                 </div>
-                <div class="plan">
-                    <h3>Anual</h3>
+                <div class="plan discounted">
+                    <h3>Plan Anual</h3>
                     <p class="price">$49.99/año</p>
-                    <a href="#" class="cta-button">Suscríbete</a>
+                    <p><small>Prueba gratuita de 30 días</small></p>
+                    <p class="discount">¡15% de descuento después de los 30 días!</p>
+                    <a href="https://javier330.github.io/registro/" class="cta-button">Suscríbete</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MoneyFlow. Todos los derechos reservados.</p>
+            <a href="https://www.instagram.com/moneyflowco_" class="instagram-button" target="_blank" aria-label="Síguenos en Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
