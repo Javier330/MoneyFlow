@@ -131,12 +131,18 @@ header p {
     color: #555;
 }
 
-/* Sección de Preguntas Frecuentes */
+/* Sección de Preguntas Frecuentes - sin encabezado */
 #faq {
-    padding: 60px 20px;
+    padding: 60px 20px;  /* Asegura que haya suficiente espacio alrededor */
     background-color: #fff;
 }
 
+/* Si existe algún estilo para h2 o h3 que se refiere a un encabezado en #faq, eliminamos o escondemos el encabezado */
+#faq h2, #faq h3 {
+    display: none; /* Esto asegura que si existe un encabezado, no se muestre */
+}
+
+/* Estilos para los elementos de las preguntas frecuentes */
 .faq-item {
     background-color: #fff;
     padding: 20px;
@@ -154,7 +160,6 @@ header p {
     font-size: 1.2rem;
     color: #555;
 }
-
 /* Sección de Opiniones de los usuarios */
 #reviews {
     padding: 60px 20px;
