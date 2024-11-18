@@ -15,7 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
+// Añadir clase 'scrolled' a la barra de navegación cuando se desplaza
+    document.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
     // Manejador para los botones de suscripción en los planes
     document.querySelectorAll('.plans .cta-button').forEach(button => {
         button.addEventListener('click', function () {
