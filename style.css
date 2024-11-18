@@ -6,11 +6,18 @@
     font-family: 'Roboto', sans-serif; /* Usamos una fuente más formal y moderna */
 }
 
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column; /* Hacemos que los elementos del body se apilen verticalmente */
+}
+
 body {
     background-color: #f4f6f8; /* Fondo suave */
     color: #333; /* Gris oscuro para texto */
     margin: 0;
     padding: 0;
+    flex-grow: 1; /* Permite que el body ocupe el espacio disponible */
 }
 
 /* Barra de navegación fija */
@@ -181,6 +188,7 @@ header p {
 #reviews {
     padding: 60px 20px;
     background-color: #f9f9f9;
+    flex-grow: 1; /* Permite que la sección de opiniones ocupe el espacio disponible */
 }
 
 .review-item {
@@ -267,19 +275,14 @@ header p {
     background-color: #1f78b7;
 }
 
-/* Sección de descuento */
-.discount {
-    color: #e74c3c;
-    font-size: 1.3rem;
-}
-
-/* Footer */
+/* Sección de footer */
 footer {
-    background-color: #2d9cdb; /* Azul profesional para el pie de página */
+    background-color: #2d9cdb;
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: auto; /* Asegura que el footer siempre esté al final */
 }
 
 .instagram-button {
