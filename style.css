@@ -133,7 +133,8 @@ header p {
 
 /* Sección de Preguntas Frecuentes - sin encabezado */
 #faq {
-    padding: 60px 20px;  /* Asegura que haya suficiente espacio alrededor */
+    padding-top: 120px;
+    padding-bottom: 60px;
     background-color: #fff;
 }
 
