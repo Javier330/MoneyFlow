@@ -3,6 +3,7 @@
         imagen-profesional.webp
         imagen-estudiante.webp
         imagen-adulto.webp
+        logo.png
     index.html
     style.css
     script.js
