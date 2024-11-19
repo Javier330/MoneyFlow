@@ -288,19 +288,19 @@ footer {
 /* Asegurar que solo los botones de Instagram tengan este estilo */
 footer .instagram-button {
     background-color: #e4405f; /* Color del botón */
-    color: #fff; /* Texto blanco */
-    padding: 12px; /* Espaciado interno */
-    border-radius: 50%; /* Botón redondeado */
-    text-align: center; /* Centrado del texto */
-    display: inline-block; /* Para comportarse como un botón */
-    margin-top: 10px; /* Separación superior */
-    font-size: 1.5rem; /* Tamaño del texto */
-    transition: all 0.3s ease; /* Animación suave */
+    color: #fff; /* Color del ícono */
+    padding: 15px; /* Tamaño del botón */
+    border-radius: 50%; /* Forma circular */
+    text-align: center; /* Centrado */
+    display: inline-block; /* Comportamiento de botón */
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 2rem; /* Tamaño del ícono */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animación */
 }
 
 footer .instagram-button:hover {
-    background-color: #c13584; /* Color en hover */
-    transform: scale(1.1); /* Agrandar ligeramente en hover */
+    background-color: #c13584; /* Cambia el color en hover */
+    transform: scale(1.1); /* Agranda ligeramente */
 }
 
 footer .instagram-button i {
