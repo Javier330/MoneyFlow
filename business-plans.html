@@ -3,76 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes para Negocios</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Planes de Negocio</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        /* Barra de navegación fija */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 25px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Sección de Planes de Negocio */
+        #business-plans {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        #business-plans h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .business-plan-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .business-plan-card {
+            background-color: #f8f8f8;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 400px;
+        }
+
+        .business-plan-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .business-plan-card .price {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .business-plan-card small {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        .business-plan-card .cta-button {
+            background-color: #2d9cdb;
+            color: #fff;
+            font-size: 1.3rem;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: auto;
+            font-weight: 600;
+        }
+
+        .business-plan-card .cta-button:hover {
+            background-color: #1f78b7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d9cdb;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer .instagram-button {
+            display: inline-block;
+            background-color: #e4405f;
+            padding: 8px;
+            border-radius: 50%;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            width: 40px;
+            height: 40px;
+        }
+
+        footer .instagram-button img {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer .instagram-button:hover {
+            background-color: #c13584;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <!-- Barra de navegación -->
-    <nav class="navbar">
+    <div class="navbar">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="plans.html">Planes</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="review.html">Opiniones</a></li>
+            <li><a href="#target-audience">Público Objetivo</a></li>
+            <li><a href="#reviews">Opiniones</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Planes para Negocios</h1>
-        <p>Soluciones personalizadas para empresas que desean optimizar sus finanzas.</p>
-    </header>
-
-    <!-- Sección de Planes para Negocios -->
+    <!-- Sección de Planes de Negocio -->
     <section id="business-plans">
-        <h2>Descubre nuestros Planes Empresariales</h2>
-        <div class="plans">
-            <!-- Plan Básico -->
-            <div class="plan">
+        <h2>Planes de Negocio</h2>
+        <div class="business-plan-cards">
+            <div class="business-plan-card">
                 <h3>Plan Básico</h3>
-                <p class="price">$99<span>/mes</span></p>
-                <ul>
-                    <li>Hasta 10 empleados</li>
-                    <li>Gestión de flujo de caja</li>
-                    <li>Reportes básicos</li>
-                    <li>Soporte estándar</li>
-                </ul>
-                <a href="#" class="cta-button">Elegir Plan</a>
+                <div class="price">$99</div>
+                <small>Ideal para pequeñas empresas</small>
+                <a href="#" class="cta-button">Ver Más</a>
             </div>
-            
-            <!-- Plan Premium -->
-            <div class="plan">
-                <h3>Plan Premium</h3>
-                <p class="price">$199<span>/mes</span></p>
-                <ul>
-                    <li>Hasta 50 empleados</li>
-                    <li>Control avanzado de presupuestos</li>
-                    <li>Reportes avanzados</li>
-                    <li>Soporte prioritario</li>
-                </ul>
-                <a href="#" class="cta-button">Elegir Plan</a>
+            <div class="business-plan-card">
+                <h3>Plan Profesional</h3>
+                <div class="price">$199</div>
+                <small>Para empresas establecidas</small>
+                <a href="#" class="cta-button">Ver Más</a>
             </div>
-            
-            <!-- Plan Corporativo -->
-            <div class="plan">
+            <div class="business-plan-card">
                 <h3>Plan Corporativo</h3>
-                <p class="price">Personalizado</p>
-                <ul>
-                    <li>Sin límite de empleados</li>
-                    <li>Funciones personalizadas</li>
-                    <li>Consultoría financiera</li>
-                    <li>Soporte dedicado 24/7</li>
-                </ul>
-                <a href="#" class="cta-button">Contáctanos</a>
+                <div class="price">$499</div>
+                <small>Para grandes corporaciones</small>
+                <a href="#" class="cta-button">Ver Más</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 MoneyFlow. Todos los derechos reservados.</p>
-        <a href="https://www.instagram.com/moneyflowco_" class="instagram-button" target="_blank" aria-label="Síguenos en Instagram">
-            <img src="imagenes/instagram-logo.png" alt="Instagram Logo">
+        <p>© 2024 Todos los derechos reservados.</p>
+        <a href="#" class="instagram-button">
+            <img src="instagram-logo.png" alt="Instagram">
         </a>
     </footer>
 </body>
