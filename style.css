@@ -285,23 +285,24 @@ footer {
     margin-top: auto; /* Asegura que el footer siempre esté al final */
 }
 
-.instagram-button {
-    background-color: #e4405f;
-    color: #fff;
-    padding: 12px;
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    font-size: 1.5rem;
+/* Asegurar que solo los botones de Instagram tengan este estilo */
+footer .instagram-button {
+    background-color: #e4405f !important;
+    color: #fff !important;
+    padding: 12px !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    display: inline-block !important;
+    margin-top: 10px !important;
+    font-size: 1.5rem !important;
+    transition: all 0.3s ease !important;
 }
 
-.instagram-button:hover {
-    background-color: #c13584;
-    transform: scale(1.1);
+footer .instagram-button:hover {
+    background-color: #c13584 !important;
+    transform: scale(1.1) !important;
 }
 
-.instagram-button i {
-    pointer-events: none;
+footer .instagram-button i {
+    pointer-events: none !important;
 }
