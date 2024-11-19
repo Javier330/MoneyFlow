@@ -289,16 +289,19 @@ footer {
 footer .instagram-button {
     display: inline-block; /* Asegura que el enlace se comporte como botón */
     background-color: #e4405f; /* Fondo del botón */
-    padding: 10px; /* Espaciado interno */
+    padding: 8px; /* Espaciado interno */
     border-radius: 50%; /* Hace que el botón sea redondo */
     text-align: center; /* Centra el contenido */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+    width: 40px; /* Tamaño fijo del boton */
+    height: 40px; /* Tamaño fijo del boton */
 }
 
 footer .instagram-button img {
-    width: 30px; /* Tamaño del logo */
-    height: 30px; /* Asegura que sea cuadrado */
+    width: 20px; /* Tamaño del logo */
+    height: 20px; /* Asegura que sea cuadrado */
     display: block; /* Elimina márgenes extra */
+    margin: 0 auto; /* Centra la imagen dentro del boton */
 }
 
 footer .instagram-button:hover {
