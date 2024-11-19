@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Empresa</title>
+    <link rel="stylesheet" href="style.css"> <!-- Puedes usar el mismo archivo de estilos -->
+</head>
+<body>
+    <!-- Formulario de información de empresa -->
+    <div class="form-container">
+        <h2>Información de la Empresa</h2>
+        <form id="company-form">
+            <label for="company-name">Nombre de la Empresa:</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Escribe el nombre de tu empresa" required>
+
+            <label for="employee-count">Número de Empleados:</label>
+            <input type="number" id="employee-count" name="employee-count" placeholder="Número de empleados" required>
+
+            <label for="contact-person">Nombre del Responsable de Comunicación:</label>
+            <input type="text" id="contact-person" name="contact-person" placeholder="Nombre del responsable" required>
+
+            <label for="company-target">¿A qué está dirigida la empresa?</label>
+            <input type="text" id="company-target" name="company-target" placeholder="Describe a qué está dirigida la empresa" required>
+
+            <button type="submit" class="cta-button">Guardar Información</button>
+        </form>
+    </div>
+
+    <script>
+        // Al enviar el formulario, guardamos los datos en el localStorage
+        document.getElementById('company-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
+            // Recopilamos los datos del formulario
+            const companyName = document.getElementById('company-name').value;
+            const employeeCount = document.getElementById('employee-count').value;
+            const contactPerson = document.getElementById('contact-person').value;
+            const companyTarget = document.getElementById('company-target').value;
+
+            // Guardamos los datos en el localStorage
+            const companyData = {
+                companyName: companyName,
+                employeeCount: employeeCount,
+                contactPerson: contactPerson,
+                companyTarget: companyTarget
+            };
+
+            localStorage.setItem('companyData', JSON.stringify(companyData));
+
+            // Confirmación de que los datos se guardaron
+            alert("Información guardada exitosamente");
+
+            // Redirigir al usuario a una página de confirmación o volver a la página de planes
+            window.location.href = "thank-you.html"; // Redirige a una página de agradecimiento (puedes crearla)
+        });
+    </script>
+</body>
+</html>
