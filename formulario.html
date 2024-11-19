@@ -165,5 +165,17 @@
             <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
         </footer>
     </div>
+    
+    <!-- Script de redirección -->
+    <script>
+        document.getElementById("formRegistro").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+
+            // Aquí podrías agregar código para procesar los datos del formulario si es necesario
+            // Después de eso, redirige a la página de agradecimiento
+
+            window.location.href = "thank-you.html"; // Redirige a la página de agradecimiento
+        });
+    </script>
 </body>
 </html>
