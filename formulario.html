@@ -3,57 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Empresa</title>
-    <link rel="stylesheet" href="style.css"> <!-- Puedes usar el mismo archivo de estilos -->
+    <title>Registro de Empresa</title>
+    <!-- Estilos integrados dentro del HTML -->
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        header {
+            display: flex;
+            flex-direction: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+            align-items: center;
+            background-color: #2d9cdb;
+            padding: 50px 20px; /* Ajusta el padding para un mejor espaciado */
+            color: #fff;
+        }
+
+        header .text {
+            text-align: center; /* Alinea el texto en el centro */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para el formulario de registro */
+        #registro .form-group {
+            margin-bottom: 20px;
+        }
+
+        #registro label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        #registro input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        #registro input:focus {
+            border-color: #2d9cdb;
+            outline: none;
+        }
+
+        #registro button {
+            background-color: #27ae60;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        #registro button:hover {
+            background-color: #2ecc71;
+        }
+
+        /* Estilo para el enlace a la página de inicio de sesión */
+        #registro p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #registro p a {
+            color: #2d9cdb;
+            text-decoration: none;
+        }
+
+        #registro p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d9cdb;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Formulario de información de empresa -->
-    <div class="form-container">
-        <h2>Información de la Empresa</h2>
-        <form id="company-form">
-            <label for="company-name">Nombre de la Empresa:</label>
-            <input type="text" id="company-name" name="company-name" placeholder="Escribe el nombre de tu empresa" required>
+    <div class="container">
+        <header>
+            <div class="text">
+                <h1>Registro de Empresa</h1>
+                <p>Por favor, completa los siguientes campos para registrarte</p>
+            </div>
+        </header>
 
-            <label for="employee-count">Número de Empleados:</label>
-            <input type="number" id="employee-count" name="employee-count" placeholder="Número de empleados" required>
+        <!-- Formulario de registro -->
+        <div id="registro">
+            <form action="thank-you.html" method="POST">
+                <!-- Campo Nombre de la Empresa -->
+                <div class="form-group">
+                    <label for="nombre_empresa">Nombre de la Empresa</label>
+                    <input type="text" id="nombre_empresa" name="nombre_empresa" required>
+                </div>
 
-            <label for="contact-person">Nombre del Responsable de Comunicación:</label>
-            <input type="text" id="contact-person" name="contact-person" placeholder="Nombre del responsable" required>
+                <!-- Campo Nombre del Gestor -->
+                <div class="form-group">
+                    <label for="nombre_gestor">Nombre del Gestor</label>
+                    <input type="text" id="nombre_gestor" name="nombre_gestor" required>
+                </div>
 
-            <label for="company-target">¿A qué está dirigida la empresa?</label>
-            <input type="text" id="company-target" name="company-target" placeholder="Describe a qué está dirigida la empresa" required>
+                <!-- Campo Público Objetivo -->
+                <div class="form-group">
+                    <label for="publico_objetivo">¿A quién va dirigida la empresa?</label>
+                    <input type="text" id="publico_objetivo" name="publico_objetivo" required>
+                </div>
 
-            <button type="submit" class="cta-button">Guardar Información</button>
-        </form>
+                <!-- Campo Empleados -->
+                <div class="form-group">
+                    <label for="empleados">Número de Empleados</label>
+                    <input type="number" id="empleados" name="empleados" required>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </footer>
     </div>
-
-    <script>
-        // Al enviar el formulario, guardamos los datos en el localStorage
-        document.getElementById('company-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el comportamiento predeterminado del formulario
-
-            // Recopilamos los datos del formulario
-            const companyName = document.getElementById('company-name').value;
-            const employeeCount = document.getElementById('employee-count').value;
-            const contactPerson = document.getElementById('contact-person').value;
-            const companyTarget = document.getElementById('company-target').value;
-
-            // Guardamos los datos en el localStorage
-            const companyData = {
-                companyName: companyName,
-                employeeCount: employeeCount,
-                contactPerson: contactPerson,
-                companyTarget: companyTarget
-            };
-
-            localStorage.setItem('companyData', JSON.stringify(companyData));
-
-            // Confirmación de que los datos se guardaron
-            alert("Información guardada exitosamente");
-
-            // Redirigir al usuario a una página de confirmación o volver a la página de planes
-            window.location.href = "thank-you.html"; // Redirige a una página de agradecimiento (puedes crearla)
-        });
-    </script>
 </body>
 </html>
