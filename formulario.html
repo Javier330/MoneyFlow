@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Empresa</title>
-    <!-- Estilos integrados dentro del HTML -->
     <style>
         /* Estilos generales */
         * {
@@ -130,7 +129,7 @@
 
         <!-- Formulario de registro -->
         <div id="registro">
-            <form action="thank-you.html" method="POST">
+            <form id="formRegistro" method="POST">
                 <!-- Campo Nombre de la Empresa -->
                 <div class="form-group">
                     <label for="nombre_empresa">Nombre de la Empresa</label>
@@ -171,10 +170,15 @@
         document.getElementById("formRegistro").addEventListener("submit", function(event) {
             event.preventDefault(); // Evita el envío real del formulario
 
-            // Aquí podrías agregar código para procesar los datos del formulario si es necesario
-            // Después de eso, redirige a la página de agradecimiento
+            // Simula el procesamiento de datos del formulario
+            console.log("Formulario enviado:");
+            console.log("Nombre de la empresa:", document.getElementById("nombre_empresa").value);
+            console.log("Nombre del gestor:", document.getElementById("nombre_gestor").value);
+            console.log("Público objetivo:", document.getElementById("publico_objetivo").value);
+            console.log("Número de empleados:", document.getElementById("empleados").value);
 
-            window.location.href = "https://javier330.github.io/agradecimiento/"; // Redirige a la página de agradecimiento
+            // Redirige a la página de agradecimiento
+            window.location.href = "https://javier330.github.io/agradecimiento/";
         });
     </script>
 </body>
